@@ -3,13 +3,14 @@ import SwiftUI
 struct ContentView: View {
     
     @State var HueVal: Double = 1.0 // 1.0 = 360 degrees of hue
-    @State var HueStr : String //Create Str val used for text field
+    
     
     @State var SatVal: Double = 1.0 // 1.0 = 100% saturation
-    @State var SatStr : String//Create Str val used for text field
+    
     
     @State var BriVal: Double = 1.0 // 1.0 = 100% brightness
-    @State var BriStr : String//Create Str val used for text field
+    
+    
     
 
     var body: some View {
@@ -24,25 +25,23 @@ struct ContentView: View {
                 HStack {
                     Slider(value: $HueVal, in: 0...1.0)
                         .frame(width:150)
+                    Text(String(Int(HueVal)))
                     
                     
-                    TextField(text: $HueVal)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                                    .padding()
                 }
                 
                 Text("Saturation")
                 HStack {
                     Slider(value: $SatVal, in: 0...1.0)
                         .frame(width:150)
-                    Text()
+                    Text(String(Int(SatVal)))
                 }
                 
                 Text("Brightness")
                 HStack {
                     Slider(value: $BriVal, in: 0...1.0)
                         .frame(width:150)
-                    Text()
+                    Text(String(Int(BriVal)))
                 }
                 .padding()
                 
