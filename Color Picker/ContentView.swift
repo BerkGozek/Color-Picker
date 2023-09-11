@@ -25,7 +25,7 @@ struct ContentView: View {
                 HStack {
                     Slider(value: $HueVal, in: 0...1.0)
                         .frame(width:150)
-                    Text(String(Int(HueVal)))
+                    Text(String(Int(HueVal*360)))
                     
                     
                 }
@@ -34,14 +34,14 @@ struct ContentView: View {
                 HStack {
                     Slider(value: $SatVal, in: 0...1.0)
                         .frame(width:150)
-                    Text(String(Int(SatVal)))
+                    Text(String(Int(SatVal*100)))
                 }
                 
                 Text("Brightness")
                 HStack {
                     Slider(value: $BriVal, in: 0...1.0)
                         .frame(width:150)
-                    Text(String(Int(BriVal)))
+                    Text(String(Int(BriVal*100)))
                 }
                 .padding()
                 
