@@ -9,7 +9,7 @@ struct ContentView: View {
     
     
     @State var BriVal: Double = 1.0 // 1.0 = 100% brightness
-    
+    @State var BriInp: Int = 0
     
     
 
@@ -41,7 +41,18 @@ struct ContentView: View {
                 HStack {
                     Slider(value: $BriVal, in: 0...1.0)
                         .frame(width:150)
-                    Text(String(Int(BriVal*100)))
+//                    Text(String(Int(BriVal*100)))
+                    TextField("", value: $BriInp, formatter:NumberFormatter())
+                        .onChange(of: BriInp) { newValue in
+                            if (newValue>100){
+                                BriVal = 1.0
+                                BriInp = 100
+                            }
+                            else if (newValue>100){
+                                BriVal = 0.0
+                                BriInp = 0
+                            }
+                        }
                 }
                 .padding()
                 
