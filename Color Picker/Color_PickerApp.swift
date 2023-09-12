@@ -12,10 +12,10 @@ struct Color_PickerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .frame(width: 200, height: 500, alignment: .center)
-                .fixedSize()
+                .frame(width: 250, height: 400)
+                
         }
-        .windowStyle(HiddenTitleBarWindowStyle())
         .windowResizability(.contentSize)
+        .windowStyle(HiddenTitleBarWindowStyle()) // Set a specific window style
     }
 }
