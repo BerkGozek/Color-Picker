@@ -1,5 +1,5 @@
-# Color-Picker
-An HSB Color Picker for AP Computer Science Principles @ Hisar School 2023-2024
+# HSB Color-Picker
+An Hue-Saturation-Brightness Color Picker for AP Computer Science Principles @ Hisar School 2023-2024
 
 This project was made with SwiftUI
 
@@ -10,3 +10,8 @@ This project was made with SwiftUI
 
 
 <img src="https://github.com/BerkGozek/Color-Picker/blob/f679367800d76feadfd611961f829d751ca28133/ScreenShots/ColPick_Anim.gif" width = "250" height = "428" />
+
+## App Recipe
+
+- Create 3 doubles for each of the values
+    - 
